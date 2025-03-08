@@ -30,7 +30,7 @@ public class TileManager {
         mapTileNum = new int[gp.maxWorldCol][gp.maxWorldRow];
 
         getTileImage();
-        loadMap("/maps/train2.txt");
+        loadMap("/maps/train3.txt");
 
 //        //READ TILE DATA FILE
 //        InputStream is = getClass().getResourceAsStream("/maps/tiledata.txt");
@@ -66,6 +66,7 @@ public class TileManager {
         try {
             tile[0] = new Tile();
             tile[0].image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Tiles/black_tile.png")));
+            tile[0].collision = true;
 
             tile[1] = new Tile();
             tile[1].image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Tiles/black_tile_interactable.png")));
@@ -75,15 +76,19 @@ public class TileManager {
 
             tile[3] = new Tile();
             tile[3].image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Tiles/chest.png")));
+            tile[3].collision = true;
 
             tile[4] = new Tile();
             tile[4].image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Tiles/crate.png")));
+            tile[4].collision = true;
 
             tile[5] = new Tile();
             tile[5].image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Tiles/crate1.png")));
+            tile[5].collision = true;
 
             tile[6] = new Tile();
             tile[6].image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Tiles/crate3.png")));
+            tile[6].collision = true;
 
             tile[7] = new Tile();
             tile[7].image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Tiles/floor_carpet_down.png")));
@@ -108,12 +113,14 @@ public class TileManager {
 
             tile[14] = new Tile();
             tile[14].image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Tiles/seats_down_L.png")));
+            tile[14].collision = true;
 
             tile[15] = new Tile();
             tile[15].image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Tiles/seats_down_L_nofloor.png")));
 
             tile[16] = new Tile();
             tile[16].image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Tiles/seats_down_r.png")));
+            tile[16].collision = true;
 
             tile[17] = new Tile();
             tile[17].image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Tiles/seats_down_r_nofloor.png")));
@@ -126,6 +133,7 @@ public class TileManager {
 
             tile[20] = new Tile();
             tile[20].image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Tiles/seats_up_r.png")));
+            tile[20].collision = true;
 
             tile[21] = new Tile();
             tile[21].image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Tiles/seats_up_r_nofloor.png")));
@@ -147,27 +155,35 @@ public class TileManager {
 
             tile[27] = new Tile();
             tile[27].image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Tiles/train_walls_down.png")));
+            tile[27].collision = true;
 
             tile[28] = new Tile();
             tile[28].image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Tiles/train_walls_left.png")));
+            tile[28].collision = true;
 
             tile[29] = new Tile();
             tile[29].image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Tiles/train_walls_leftCorner.png")));
+            tile[29].collision = true;
 
             tile[30] = new Tile();
             tile[30].image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Tiles/train_walls_leftCorner_down.png")));
+            tile[30].collision = true;
 
             tile[31] = new Tile();
             tile[31].image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Tiles/train_walls_right.png")));
+            tile[31].collision = true;
 
             tile[32] = new Tile();
             tile[32].image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Tiles/train_walls_rightCorner.png")));
+            tile[32].collision = true;
 
             tile[33] = new Tile();
             tile[33].image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Tiles/train_walls_rightCorner_down.png")));
+            tile[33].collision = true;
 
             tile[34] = new Tile();
             tile[34].image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/Tiles/train_walls_up.png")));
+            tile[34].collision = true;
 
         } catch (IOException e) {
             e.printStackTrace();

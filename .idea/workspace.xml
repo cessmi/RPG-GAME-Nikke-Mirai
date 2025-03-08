@@ -5,26 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20631d4d-f436-40f6-89b8-53113f9e6468" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/res/Tiles/black_tile_interactable.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/maps/tiledata2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/maps/train2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/maps/train3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/spr_npc_daphni_east_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_east_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/spr_npc_daphni_south_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_south_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/spr_npc_daphni_south_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_south_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_east_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_east_0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_east_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_east_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_north_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_north_0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_north_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_north_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_north_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_north_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_south_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_south_0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_south_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_south_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_west_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_west_0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/spr_npc_daphni_west_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_west_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/spr_npc_dapnhi_walk_north_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/spr_npc_dapnhi_walk_north_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/spr_npc_dapni_walk_east_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/spr_npc_dapni_walk_east_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/spr_npc_dapni_walk_west_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/spr_npc_dapni_walk_west_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/spr_npc_darcy_daphni_east_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/spr_npc_darcy_daphni_east_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile/CollisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/CollisionChecker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

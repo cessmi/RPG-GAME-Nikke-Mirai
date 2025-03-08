@@ -10,7 +10,7 @@ import java.awt.*;
 public class GamePanel extends JPanel implements Runnable {
 
     //Screen Settings
-    final int originalTileSize = 16; //16 x 16
+    public final int originalTileSize = 16; //16 x 16
     final int scale = 3; //16 x 4 = 64
 
     public int tileSize = originalTileSize * scale; //48x48 tile
@@ -27,7 +27,7 @@ public class GamePanel extends JPanel implements Runnable {
 
     //FPS
     int FPS = 60;
-    TileManager tileM = new TileManager(this);
+    public TileManager tileM = new TileManager(this);
     KeyHandler keyH = new KeyHandler();
     Thread gameThread;
     public CollisionChecker cChecker = new CollisionChecker(this);

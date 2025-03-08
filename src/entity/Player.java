@@ -25,7 +25,12 @@ public class Player extends Entity {
         screenX = gp.screenWidth / 2 - (gp.tileSize / 2);
         screenY = gp.screenHeight / 2 - (gp.tileSize / 2);
 
-        solidArea = new Rectangle(8, 16, 32, 32);
+        solidArea = new Rectangle();
+            solidArea.x = 10;
+            solidArea.y = 20;
+            solidArea.width = 28;
+            solidArea.height = 28;
+
 
         setDefaultValues();
         getPlayerImage();
@@ -69,42 +74,45 @@ public class Player extends Entity {
     }
 
     public void update() {
-        boolean isMoving = false;
+        boolean isMoving = keyH.upPressed || keyH.downPressed || keyH.leftPressed || keyH.rightPressed;
 
         if (keyH.upPressed) {
             direction = "up";
-            worldY -= speed;
-            isMoving = true;
         }
         if (keyH.downPressed) {
             direction = "down";
-            worldY += speed;
-            isMoving = true;
         }
         if (keyH.leftPressed) {
             direction = "left";
-            worldX -= speed;
-            isMoving = true;
         }
         if (keyH.rightPressed) {
             direction = "right";
-            worldX += speed;
-            isMoving = true;
         }
 
+        // Check Tile & Entity Collision
         collisionOn = false;
-       gp.cChecker.checkTile(this);
+        gp.cChecker.checkTile(this);
 
+        // If no collision, move the player **only when moving**
+        if (!collisionOn && isMoving) {
+            System.out.println("Moving " + direction + " - No collision detected");
+            switch (direction) {
+                case "up" -> worldY -= speed;
+                case "down" -> worldY += speed;
+                case "left" -> worldX -= speed;
+                case "right" -> worldX += speed;
+            }
+        }
+
+        // Handle sprite animation
         if (isMoving) {
             spriteCounter++;
             if (spriteCounter > 12) {
-                spriteNum++;
-                if (spriteNum > 3) {
-                    spriteNum = 1;
-                }
+                spriteNum = (spriteNum % 3) + 1;
                 spriteCounter = 0;
             }
         } else {
+            // Only update idleImage when not moving
             idleImage = switch (direction) {
                 case "up" -> north0;
                 case "down" -> south0;
@@ -114,6 +122,7 @@ public class Player extends Entity {
             };
         }
     }
+
 
     public void draw(Graphics2D g2) {
         BufferedImage image = keyH.upPressed || keyH.downPressed || keyH.leftPressed || keyH.rightPressed
