@@ -5,39 +5,89 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20631d4d-f436-40f6-89b8-53113f9e6468" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nikke Mirai.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles/grass1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles/grass2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles/grass_101.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles/wall.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles/water_o.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/maps/map01.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/maps/map_ver_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/nikkebackidle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/nikkebackwalk1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/nikkebackwalk2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/nikkefrontidle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/nikkefrontwalk1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/nikkefrontwalk2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/nikkeidlesideidle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/nikkeidlesidewalk1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/nikkeidlesidewalk2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/nikkesidewalkleft1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/nikkesidewalkleft2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/nikkesidewalkleftidle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tile/Tile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/chest.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/crate.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/crate1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/crate3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/floor_carpet_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/floor_carpet_down_endL.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/floor_carpet_down_endR.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/floor_carpet_up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/floor_carpet_up_endL.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/floor_carpet_up_endR.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/library_floor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/seats_down_L.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/seats_down_L_nofloor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/seats_down_r.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/seats_down_r_nofloor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/seats_up_L.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/seats_up_L_nofloor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/seats_up_r.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/seats_up_r_nofloor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/train_doors__right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/train_doors__right2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/train_doors_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/train_doors_left2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/train_floor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/train_walls_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/train_walls_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/train_walls_leftCorner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/train_walls_leftCorner_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/train_walls_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/train_walls_rightCorner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/train_walls_rightCorner_down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Tiles/train_walls_up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/maps/tiledata.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/maps/train.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/maps/train_trial.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/maps/trial.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_south_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_south_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_east_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_east_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_north_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_north_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_north_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_south_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_south_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_walk_west_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_west_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/spr_npc_dapnhi_walk_north_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/spr_npc_dapni_walk_east_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/spr_npc_dapni_walk_west_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player/spr_npc_darcy_daphni_east_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/sprites/DAphni normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/sprites/DAphni speaking.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/sprites/Phobius normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/sprites/Phobius speak.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tile/CollisionChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Tiles/grass1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Tiles/grass2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Tiles/grass_101.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/Tiles/blue_tile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Tiles/wall.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/Tiles/black_tile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Tiles/water_o.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/spr_npc_daphni_east_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/maps/map01.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/maps/map_ver_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/nikkebackidle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/nikkebackwalk1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/nikkebackwalk2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/nikkefrontidle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/nikkefrontwalk1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/nikkefrontwalk2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/nikkeidlesideidle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/nikkeidlesidewalk1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/nikkeidlesidewalk2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/nikkesidewalkleft1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/nikkesidewalkleft2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/nikkesidewalkleftidle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,10 +119,12 @@
     "Application.Main.executor": "Run",
     "Application.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Kyla/IdeaProjects/Nikke Mirai/res/maps",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/RPG-GAME-Nikke-Mirai/res/maps",
     "onboarding.tips.debug.path": "C:/Users/Kyla/IdeaProjects/Nikke Mirai/res/src/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -81,11 +133,17 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\maps" />
+      <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\Tiles" />
+      <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\player" />
       <recent name="C:\Users\Kyla\IdeaProjects\Nikke Mirai\res\maps" />
       <recent name="C:\Users\Kyla\IdeaProjects\Nikke Mirai\res\Tiles" />
-      <recent name="C:\Users\Kyla\IdeaProjects\Nikke Mirai\res\player" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\maps" />
+      <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\Tiles" />
+      <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\player" />
+      <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\sprites" />
       <recent name="C:\Users\Kyla\IdeaProjects\Nikke Mirai\res\src\player" />
     </key>
   </component>

@@ -1,162 +1,132 @@
 package entity;
 
-
 import main.GamePanel;
 import main.KeyHandler;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.IOError;
 import java.io.IOException;
 
-public class Player extends Entity{
-
+public class Player extends Entity {
 
     GamePanel gp;
     KeyHandler keyH;
 
+    public final int screenX;
+    public final int screenY;
+
     BufferedImage idleImage;
 
-    public Player (GamePanel gp, KeyHandler keyH){
-
+    public Player(GamePanel gp, KeyHandler keyH) {
         this.gp = gp;
         this.keyH = keyH;
+
+        screenX = gp.screenWidth / 2 - (gp.tileSize / 2);
+        screenY = gp.screenHeight / 2 - (gp.tileSize / 2);
+
+        solidArea = new Rectangle(8, 16, 32, 32);
 
         setDefaultValues();
         getPlayerImage();
     }
 
-    public void setDefaultValues(){
-        x= 100;
-        y=100;
+    public void setDefaultValues() {
+        worldX = gp.tileSize * 36;
+        worldY = gp.tileSize * 53;
         speed = 4;
-        direction = "down";
+        direction = "down"; // Default direction
+        idleImage = null;  // Ensure it is initialized
     }
+
     public void getPlayerImage() {
         try {
-            idleFront = ImageIO.read(getClass().getClassLoader().getResource("player/nikkefrontidle.png"));
-            up1 = ImageIO.read(getClass().getClassLoader().getResource("player/nikkebackwalk1.png"));
-            up2 = ImageIO.read(getClass().getClassLoader().getResource("player/nikkebackwalk2.png"));
-            idleBack = ImageIO.read(getClass().getClassLoader().getResource("player/nikkebackidle.png"));
-            idleLeft = ImageIO.read(getClass().getClassLoader().getResource("player/nikkesidewalkleftidle.png"));
-            idleRight = ImageIO.read(getClass().getClassLoader().getResource("player/nikkeidlesideidle.png"));
-            down1 = ImageIO.read(getClass().getClassLoader().getResource("player/nikkefrontwalk1.png"));
-            down2 = ImageIO.read(getClass().getClassLoader().getResource("player/nikkefrontwalk2.png"));
-            left1 = ImageIO.read(getClass().getClassLoader().getResource("player/nikkesidewalkleft1.png"));
-            left2 = ImageIO.read(getClass().getClassLoader().getResource("player/nikkesidewalkleft2.png"));
-            right1 = ImageIO.read(getClass().getClassLoader().getResource("player/nikkeidlesidewalk1.png"));
-            right2 = ImageIO.read(getClass().getClassLoader().getResource("player/nikkeidlesidewalk2.png"));
+            north0 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_walk_north_0.png"));
+            north1 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_dapnhi_walk_north_1.png"));
+            north2 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_walk_north_2.png"));
+            north3 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_walk_north_3.png"));
+
+            east0 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_walk_east_0.png"));
+            east1 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_dapni_walk_east_1.png"));
+            east2 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_walk_east_2.png"));
+            east3 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_east_3.png"));
+
+            west0 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_walk_west_0.png"));
+            west1 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_dapni_walk_west_1.png"));
+            west2 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_walk_west_0.png"));
+            west3 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_west_3.png"));
+
+            south0 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_walk_south_0.png"));
+            south1 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_walk_south_1.png"));
+            south2 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_south_2.png"));
+            south3 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_south_3.png"));
+
+            idleImage = south0; // Default idle sprite
 
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Error loading player sprites: " + e.getMessage());
         }
     }
 
-
     public void update() {
+        boolean isMoving = false;
 
-        if (keyH.downPressed == true || keyH.upPressed == true || keyH.leftPressed == true || keyH.rightPressed == true) {
-            if (keyH.upPressed == true) {
-                direction = "up";
-                y -= speed;
-            } else if (keyH.downPressed == true) {
-                direction = "down";
-                y += speed;
-            } else if (keyH.leftPressed == true) {
-                direction = "left";
-                x -= speed;
-            } else if (keyH.rightPressed == true) {
-                direction = "right";
-                x += speed;
+        if (keyH.upPressed) {
+            direction = "up";
+            worldY -= speed;
+            isMoving = true;
+        }
+        if (keyH.downPressed) {
+            direction = "down";
+            worldY += speed;
+            isMoving = true;
+        }
+        if (keyH.leftPressed) {
+            direction = "left";
+            worldX -= speed;
+            isMoving = true;
+        }
+        if (keyH.rightPressed) {
+            direction = "right";
+            worldX += speed;
+            isMoving = true;
+        }
 
-            }
+        collisionOn = false;
+       gp.cChecker.checkTile(this);
 
+        if (isMoving) {
             spriteCounter++;
             if (spriteCounter > 12) {
-                if (spriteNum == 1) {
-                    spriteNum = 2;
-                } else if (spriteNum == 2) {
+                spriteNum++;
+                if (spriteNum > 3) {
                     spriteNum = 1;
                 }
                 spriteCounter = 0;
             }
-
         } else {
-            // If no keys are pressed, keep the direction but use idle frames
-            switch (direction) {
-                case "up":
-                    idleImage = idleBack;
-                    break;
-                case "down":
-                    idleImage = idleFront;
-                    break;
-                case "left":
-                    idleImage = idleLeft;
-                    break;
-                case "right":
-                    idleImage = idleRight;
-                    break;
-
-
-            }
+            idleImage = switch (direction) {
+                case "up" -> north0;
+                case "down" -> south0;
+                case "left" -> west0;
+                case "right" -> east0;
+                default -> south0;
+            };
         }
     }
 
-
-
-    public void draw(Graphics2D g2){
-        /*g2.setColor(Color.white);
-
-        g2.fillRect(x, y, gp.tileSize, gp.tileSize);*/
-
-        BufferedImage image = null;
-
-        if (keyH.downPressed || keyH.upPressed || keyH.leftPressed || keyH.rightPressed) {
-        switch(direction){
-            case "up":
-                if (spriteNum==1) {
-                    image = up1;
-                }
-                if (spriteNum == 2){
-                    image = up2;
-                }
-                break;
-
-            case "down":
-                if (spriteNum==1) {
-                    image = down1;
-                }
-                if (spriteNum == 2){
-                    image = down2;
-                }
-                break;
-
-            case "left":
-                if (spriteNum==1) {
-                    image = left1;
-                }
-                if (spriteNum == 2){
-                    image = left2;
-                }
-                break;
-
-            case "right":
-                if (spriteNum==1) {
-                    image = right1;
-                }
-                if (spriteNum == 2){
-                    image = right2;
-                }
-                break;
-
+    public void draw(Graphics2D g2) {
+        BufferedImage image = keyH.upPressed || keyH.downPressed || keyH.leftPressed || keyH.rightPressed
+                ? switch (direction) {
+            case "up" -> switch (spriteNum) { case 1 -> north1; case 2 -> north2; default -> north3; };
+            case "down" -> switch (spriteNum) { case 1 -> south1; case 2 -> south2; default -> south3; };
+            case "left" -> switch (spriteNum) { case 1 -> west1; case 2 -> west2; default -> west3; };
+            case "right" -> switch (spriteNum) { case 1 -> east1; case 2 -> east2; default -> east3; };
+            default -> idleImage;
         }
-        }
-        else {
-            image = idleImage;
+                : idleImage;
 
-        }
-        g2.drawImage(image, x, y, gp.tileSize, gp.tileSize, null);
+        int playerSize = (int) (gp.tileSize * 1.5); // Increases only player size
+        g2.drawImage(image, screenX, screenY, gp.tileSize, gp.tileSize, null);
     }
 }
-

@@ -2,16 +2,20 @@ package entity;
 
 //parent class for entities
 
+import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public class Entity {
 
-    public int x, y;
+    public int worldX, worldY;
     public int speed;
 
-    public BufferedImage idleFront, idleBack, idleLeft, idleRight, up1, up2, down1, down2, left1, left2, right1, right2;        //Buffered Image describes an image with an accessible buffer of image data
+    public BufferedImage south0, south1, south2, south3, north0, north1, north2, north3, east0, east1, east2, east3, west0, west1, west2, west3;        //Buffered Image describes an image with an accessible buffer of image data
     public String direction;
 
     public int spriteCounter = 0;
     public int spriteNum = 1;
+
+    public Rectangle solidArea;
+    public boolean collisionOn = false;
 }

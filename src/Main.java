@@ -15,11 +15,11 @@ public class Main {
         JFrame window = new JFrame();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //user can xit the window
         window.setResizable(false); //so the window cannot be resized
-        window.setTitle("Nikke Mirai");
+        window.setTitle("A Lament for the Departed");
 
         //change logo
        try{
-           BufferedImage logo = ImageIO.read(Main.class.getResourceAsStream("/player/nikkefrontidle.png"));
+           BufferedImage logo = ImageIO.read(Main.class.getResourceAsStream("/player/spr_npc_daphni_south_3.png"));
            window.setIconImage(logo);
        } catch (IOException e) {
            e.printStackTrace();
