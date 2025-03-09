@@ -150,6 +150,7 @@ public class Player extends Entity {
                         gp.ui.showMessage("It's locked.");
                     }
                     if (hasKey > 0 ){
+                        gp.ui.showMessage("Door unlocked.");
                         gp.playSE(3);
                         gp.obj[i] = null;
                         hasKey--;
