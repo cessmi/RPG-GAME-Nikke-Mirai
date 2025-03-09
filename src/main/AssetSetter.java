@@ -22,16 +22,16 @@ public class AssetSetter {
         //BOOK
         gp.obj[1] = new OBJ_Book();
         gp.obj[1].worldX = 33 * gp.tileSize;
-        gp.obj[1].worldY = 52 * gp.tileSize;
-
-        //DOOR
-        gp.obj[1] = new OBJ_Door();
-        gp.obj[1].worldX = 16 * gp.tileSize;
-        gp.obj[1].worldY = 53 * gp.tileSize;
+        gp.obj[1].worldY = 55 * gp.tileSize;
 
         //DOOR
         gp.obj[2] = new OBJ_Door();
         gp.obj[2].worldX = 16 * gp.tileSize;
-        gp.obj[2].worldY = 54 * gp.tileSize;
+        gp.obj[2].worldY = 53 * gp.tileSize;
+
+        //DOOR
+        gp.obj[3] = new OBJ_Door();
+        gp.obj[3].worldX = 16 * gp.tileSize;
+        gp.obj[3].worldY = 54 * gp.tileSize;
     }
 }

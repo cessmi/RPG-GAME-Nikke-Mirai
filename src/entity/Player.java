@@ -139,17 +139,29 @@ public class Player extends Entity {
 
             switch(objectName){
                 case "Key":
+                    gp.playSE(1);
                     hasKey++;
                     gp.obj[i] = null;
-                    System.out.println("Key: "+hasKey);
+                   gp.ui.showMessage("Acquired Key!");
                     break;
 
                 case "Door":
+                    if (hasKey == 0){
+                        gp.ui.showMessage("It's locked.");
+                    }
                     if (hasKey > 0 ){
+                        gp.playSE(3);
                         gp.obj[i] = null;
                         hasKey--;
                     }
                     System.out.println("Key: "+hasKey);
+                    break;
+
+                case "Book":
+                    gp.ui.showMessage("Acquired \"Godspeed\"");
+                    gp.playSE(0);
+                    speed +=0.5;
+                    gp.obj[i] = null;
                     break;
             }
         }
