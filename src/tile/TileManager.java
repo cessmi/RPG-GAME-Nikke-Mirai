@@ -287,8 +287,6 @@ public class TileManager {
                 worldRow++;
             }
 
-            System.out.println("Drawing tile: " + tileNum + " at (" + worldCol + ", " + worldRow + ")");
-
         }
     }
 }

@@ -19,7 +19,7 @@ public class Main {
 
         //change logo
        try{
-           BufferedImage logo = ImageIO.read(Main.class.getResourceAsStream("/player/spr_npc_daphni_south_3.png"));
+           BufferedImage logo = ImageIO.read(Main.class.getResourceAsStream("/icon/icon1.png"));
            window.setIconImage(logo);
        } catch (IOException e) {
            e.printStackTrace();
@@ -33,6 +33,7 @@ public class Main {
         window.setLocationRelativeTo(null); //not specifying the location; window will be in the center
         window.setVisible(true);
 
+        gamePanel.setupGame();
         gamePanel.startGameThread();
     }
 
