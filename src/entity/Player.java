@@ -28,9 +28,10 @@ public class Player extends Entity {
         solidArea = new Rectangle();
             solidArea.x = 10;
             solidArea.y = 20;
+            solidAreaDefaultX = solidArea.x;
+            solidAreaDefaultY = solidArea.y;
             solidArea.width = 28;
             solidArea.height = 28;
-
 
         setDefaultValues();
         getPlayerImage();
@@ -89,11 +90,19 @@ public class Player extends Entity {
             direction = "right";
         }
 
-        // Check Tile & Entity Collision
+        // **Step 1: Reset Collision Flag**
         collisionOn = false;
+
+        // **Step 2: Check Tile Collision (Walls, Water, etc.)**
         gp.cChecker.checkTile(this);
 
-        // If no collision, move the player **only when moving**
+        // **Step 3: Check Object Collision (Detect objects but still move)**
+        int objIndex = gp.cChecker.checkObject(this, true);
+        if (objIndex != -1) {
+            handleObjectInteraction(objIndex); // Handle picking up items, opening doors, etc.
+        }
+
+        // **Step 4: Move Player if No Tile Collision**
         if (!collisionOn && isMoving) {
             System.out.println("Moving " + direction + " - No collision detected");
             switch (direction) {
@@ -104,7 +113,7 @@ public class Player extends Entity {
             }
         }
 
-        // Handle sprite animation
+        // **Step 5: Handle Sprite Animation**
         if (isMoving) {
             spriteCounter++;
             if (spriteCounter > 12) {
@@ -112,7 +121,7 @@ public class Player extends Entity {
                 spriteCounter = 0;
             }
         } else {
-            // Only update idleImage when not moving
+            // **Idle animation when not moving**
             idleImage = switch (direction) {
                 case "up" -> north0;
                 case "down" -> south0;
@@ -120,6 +129,27 @@ public class Player extends Entity {
                 case "right" -> east0;
                 default -> south0;
             };
+        }
+    }
+
+    public int keys = 0; // Track how many keys the player has
+
+    public void handleObjectInteraction(int objIndex) {
+        if (gp.obj[objIndex] != null) {
+            System.out.println("Touched: " + gp.obj[objIndex].name);
+
+            switch (gp.obj[objIndex].name) {
+                case "Key" -> {
+                    System.out.println("Picked up a key!");
+                    gp.obj[objIndex] = null; // Remove the object after picking it up
+                }
+                case "Door" -> {
+                    System.out.println("Touched a door. Maybe open it?");
+                    // Example: Set a door to open instead of removing it
+                    // gp.obj[objIndex].setOpen(true);
+                }
+                default -> System.out.println("Interacted with " + gp.obj[objIndex].name);
+            }
         }
     }
 

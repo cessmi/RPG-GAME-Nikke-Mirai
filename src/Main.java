@@ -6,6 +6,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.util.Objects;
 
 public class Main {
 
@@ -19,7 +20,7 @@ public class Main {
 
         //change logo
        try{
-           BufferedImage logo = ImageIO.read(Main.class.getResourceAsStream("/icon/icon1.png"));
+           BufferedImage logo = ImageIO.read(Objects.requireNonNull(Main.class.getResourceAsStream("/icon/icon1.png")));
            window.setIconImage(logo);
        } catch (IOException e) {
            e.printStackTrace();

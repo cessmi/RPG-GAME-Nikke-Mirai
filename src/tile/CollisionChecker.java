@@ -84,4 +84,41 @@ public class CollisionChecker {
                 break;
         }
     }
+
+    public int checkObject(Entity entity, boolean player) {
+        int index = -1; // Default: No object collision
+
+        for (int i = 0; i < gp.obj.length; i++) {
+            if (gp.obj[i] != null) {
+
+                // Save original positions
+                int entitySolidX = entity.solidArea.x;
+                int entitySolidY = entity.solidArea.y;
+                int objSolidX = gp.obj[i].solidArea.x;
+                int objSolidY = gp.obj[i].solidArea.y;
+
+                // Set real positions
+                entity.solidArea.x = entity.worldX + entity.solidArea.x;
+                entity.solidArea.y = entity.worldY + entity.solidArea.y;
+                gp.obj[i].solidArea.x = gp.obj[i].worldX + gp.obj[i].solidArea.x;
+                gp.obj[i].solidArea.y = gp.obj[i].worldY + gp.obj[i].solidArea.y;
+
+                // Check if player intersects object
+                if (entity.solidArea.intersects(gp.obj[i].solidArea)) {
+                    System.out.println("Touching object: " + gp.obj[i].name);
+
+                    if (player) {
+                        index = i; // Return object index
+                    }
+                }
+
+                // Reset positions after checking
+                entity.solidArea.x = entitySolidX;
+                entity.solidArea.y = entitySolidY;
+                gp.obj[i].solidArea.x = objSolidX;
+                gp.obj[i].solidArea.y = objSolidY;
+            }
+        }
+        return index; // Returns index of object (-1 if no collision)
+    }
 }

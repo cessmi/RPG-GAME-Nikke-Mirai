@@ -5,27 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20631d4d-f436-40f6-89b8-53113f9e6468" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/res/Icon/icon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles/floor_carpet_left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles/floor_carpet_middle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles/floor_carpet_right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/main_menu/menu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/objects/book-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/objects/book.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/objects/key.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/objects/key2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/AssetSetter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/menu/DustParticle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/menu/MenuState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Key.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/SuperObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/objects/black_tile_obj.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Door.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AssetSetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Key.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/SuperObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/SuperObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile/CollisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/CollisionChecker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +51,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/RPG-GAME-Nikke-Mirai/res/objects",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/RPG-GAME-Nikke-Mirai/src/object",
     "onboarding.tips.debug.path": "C:/Users/Kyla/IdeaProjects/Nikke Mirai/res/src/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -71,18 +60,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\src\object" />
       <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\objects" />
       <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\main_menu" />
       <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\maps" />
       <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\player" />
-      <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\Tiles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\objects" />
       <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\Tiles" />
       <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\Icon" />
       <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\maps" />
       <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\player" />
-      <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\sprites" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

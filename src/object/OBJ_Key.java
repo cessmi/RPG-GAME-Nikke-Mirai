@@ -14,5 +14,6 @@ public class OBJ_Key extends SuperObject{
             System.err.println("Error: Key image not found!");
             e.printStackTrace();
         }
+        collision = true;
     }
 }
