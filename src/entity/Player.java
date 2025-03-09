@@ -16,6 +16,8 @@ public class Player extends Entity {
     public final int screenX;
     public final int screenY;
 
+    public int hasKey = 0; // Track how many keys the player has
+
     BufferedImage idleImage;
 
     public Player(GamePanel gp, KeyHandler keyH) {
@@ -98,13 +100,11 @@ public class Player extends Entity {
 
         // **Step 3: Check Object Collision (Detect objects but still move)**
         int objIndex = gp.cChecker.checkObject(this, true);
-        if (objIndex != -1) {
-            handleObjectInteraction(objIndex); // Handle picking up items, opening doors, etc.
-        }
+        pickUpObject(objIndex);
 
         // **Step 4: Move Player if No Tile Collision**
         if (!collisionOn && isMoving) {
-            System.out.println("Moving " + direction + " - No collision detected");
+//            System.out.println("Moving " + direction + " - No collision detected");
             switch (direction) {
                 case "up" -> worldY -= speed;
                 case "down" -> worldY += speed;
@@ -132,23 +132,25 @@ public class Player extends Entity {
         }
     }
 
-    public int keys = 0; // Track how many keys the player has
+    public void pickUpObject (int i){
+        if (i != 999){
 
-    public void handleObjectInteraction(int objIndex) {
-        if (gp.obj[objIndex] != null) {
-            System.out.println("Touched: " + gp.obj[objIndex].name);
+            String objectName = gp.obj[i].name;
 
-            switch (gp.obj[objIndex].name) {
-                case "Key" -> {
-                    System.out.println("Picked up a key!");
-                    gp.obj[objIndex] = null; // Remove the object after picking it up
-                }
-                case "Door" -> {
-                    System.out.println("Touched a door. Maybe open it?");
-                    // Example: Set a door to open instead of removing it
-                    // gp.obj[objIndex].setOpen(true);
-                }
-                default -> System.out.println("Interacted with " + gp.obj[objIndex].name);
+            switch(objectName){
+                case "Key":
+                    hasKey++;
+                    gp.obj[i] = null;
+                    System.out.println("Key: "+hasKey);
+                    break;
+
+                case "Door":
+                    if (hasKey > 0 ){
+                        gp.obj[i] = null;
+                        hasKey--;
+                    }
+                    System.out.println("Key: "+hasKey);
+                    break;
             }
         }
     }
