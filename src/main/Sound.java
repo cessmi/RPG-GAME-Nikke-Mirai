@@ -16,6 +16,7 @@ public class Sound {
         soundURL[1] = getClass().getResource("/sound/key_wav.wav");
         soundURL[2] = getClass().getResource("/sound/sad_piano_wav.wav");
         soundURL[3] = getClass().getResource("/sound/opendoor_wav.wav");
+        soundURL[4] = getClass().getResource("/sound/door_locked_wav.wav");
 
         for (int i = 0; i < 3; i++) {
             System.out.println("Sound file " + i + " path: " + soundURL[i]);

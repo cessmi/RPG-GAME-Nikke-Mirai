@@ -5,17 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20631d4d-f436-40f6-89b8-53113f9e6468" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/res/sound/acquire_book.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/sound/key_wav.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/sound/opendoor_wav.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/sound/sad_piano_wav.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Sound.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/fonts/PressStart2P-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/sound/door_locked_wav.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/UtilityTool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/maps/tiledata.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/maps/tiledata_train3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/maps/tiledata2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/maps/train.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/maps/train2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/maps/train_trial.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/maps/trial.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AssetSetter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Sound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/object/OBJ_Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Door.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Door.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Key.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/SuperObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/SuperObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +62,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/RPG-GAME-Nikke-Mirai/res/sound",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/RPG-GAME-Nikke-Mirai/res/maps",
     "onboarding.tips.debug.path": "C:/Users/Kyla/IdeaProjects/Nikke Mirai/res/src/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -61,11 +71,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\maps" />
       <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\sound" />
+      <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\fonts" />
       <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\src\object" />
       <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\objects" />
-      <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\main_menu" />
-      <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\maps" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\objects" />

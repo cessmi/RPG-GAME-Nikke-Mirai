@@ -3,10 +3,14 @@ package main;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import static java.awt.event.KeyEvent.VK_T;
+
 public class KeyHandler implements KeyListener {
 
-    private final GamePanel gamePanel;
+    GamePanel gamePanel;
     public boolean upPressed, downPressed, leftPressed, rightPressed, enterPressed;
+    //DEBUG
+    boolean checkDrawTime;
 
     public KeyHandler(GamePanel gamePanel) {
         this.gamePanel = gamePanel;
@@ -43,6 +47,23 @@ public class KeyHandler implements KeyListener {
             }
             if (code == KeyEvent.VK_D || code == KeyEvent.VK_RIGHT) {
                 rightPressed = true;
+            }
+            if (code == KeyEvent.VK_P) {
+               if (gamePanel.gameState == gamePanel.playState){
+                   gamePanel.gameState = gamePanel.pauseState;
+               } else if (gamePanel.gameState == gamePanel.pauseState) {
+                   gamePanel.gameState = gamePanel.playState;
+               }
+            }
+
+            if (code == KeyEvent.VK_T){
+                if (checkDrawTime == false){
+                    checkDrawTime = true;
+                }
+                else if (checkDrawTime == true){
+                    checkDrawTime = false;
+                }
+
             }
         }
     }

@@ -25,8 +25,8 @@ public class GamePanel extends JPanel implements Runnable {
     public final int screenHeight = tileSize * maxScreenRow;//768 pixels
 
     //WORLD SETTINGS
-    public final int maxWorldCol = 100;
-    public final int maxWorldRow = 100;
+    public int maxWorldCol;
+    public int maxWorldRow;
 //    public final int worldWidth = tileSize * maxWorldCol;
 //    public final int worldHeight = tileSize * maxWorldRow;
 
@@ -47,6 +47,11 @@ public class GamePanel extends JPanel implements Runnable {
     public Player player = new Player (this, keyH);
     public SuperObject obj[] = new SuperObject[10];
 
+    //GAME STATE
+    public int gameState;
+    public final int playState = 1;
+    public final int pauseState = 2;
+
     //constructor
     public GamePanel(){
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
@@ -63,8 +68,8 @@ public class GamePanel extends JPanel implements Runnable {
     public void setupGame(){
 
         aSetter.setObject();
-
         playMusic(2);
+        gameState = playState;
     }
 
     public void startGameThread(){
@@ -147,11 +152,15 @@ public class GamePanel extends JPanel implements Runnable {
     //4 x 3
 
     //Upper corner sa Java X:0 ; Y:0
-    public void update(){
+    public void update() {
         if (inMenu) {
             menuState.update();
         } else {
-            player.update();
+            if (gameState == playState) {
+                player.update();
+            }
+            if (gameState == pauseState) {
+            }
         }
     }
 
@@ -160,9 +169,16 @@ public class GamePanel extends JPanel implements Runnable {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
 
+        //DEBUG
+        long drawStart = 0;
+        if(keyH.checkDrawTime == true){
+            drawStart = System.nanoTime();
+        }
+
         if (inMenu) {
             menuState.draw(g2);
         } else {
+
             //TILE
             tileM.draw(g2);
             //OBJECT
@@ -176,6 +192,16 @@ public class GamePanel extends JPanel implements Runnable {
 
             //UI
             ui.draw(g2);
+
+            //DEBUG
+            if(keyH.checkDrawTime == true){
+                long drawEnd = System.nanoTime();
+                long passed = drawEnd - drawStart;
+                g2.setColor(Color.white);
+                g2.drawString("Draw time: " + passed, 10, 400);
+                System.out.println("Draw time: " + passed);
+            }
+
         }
 
         g2.dispose();

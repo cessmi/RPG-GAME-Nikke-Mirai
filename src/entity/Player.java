@@ -2,11 +2,14 @@ package entity;
 
 import main.GamePanel;
 import main.KeyHandler;
+import main.UtilityTool;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.util.Objects;
 
 public class Player extends Entity {
 
@@ -48,32 +51,39 @@ public class Player extends Entity {
     }
 
     public void getPlayerImage() {
-        try {
-            north0 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_walk_north_0.png"));
-            north1 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_dapnhi_walk_north_1.png"));
-            north2 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_walk_north_2.png"));
-            north3 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_walk_north_3.png"));
+        north0 = setup("spr_npc_daphni_walk_north_0");
+        north1 = setup("spr_npc_dapnhi_walk_north_1");
+        north2 = setup("spr_npc_daphni_walk_north_2");
+        north3 = setup("spr_npc_daphni_walk_north_3");
 
-            east0 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_walk_east_0.png"));
-            east1 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_dapni_walk_east_1.png"));
-            east2 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_walk_east_2.png"));
-            east3 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_east_3.png"));
+        east0 = setup("spr_npc_daphni_walk_east_0");
+        east1 = setup("spr_npc_dapni_walk_east_1");
+        east2 = setup("spr_npc_daphni_walk_east_2");
+        east3 = setup("spr_npc_daphni_east_3");
 
-            west0 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_walk_west_0.png"));
-            west1 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_dapni_walk_west_1.png"));
-            west2 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_walk_west_0.png"));
-            west3 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_west_3.png"));
+        west0 = setup("spr_npc_daphni_walk_west_0");
+        west1 = setup("spr_npc_dapni_walk_west_1");
+        west2 = setup("spr_npc_daphni_walk_west_0");
+        west3 = setup("spr_npc_daphni_west_3");
 
-            south0 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_walk_south_0.png"));
-            south1 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_walk_south_1.png"));
-            south2 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_south_2.png"));
-            south3 = ImageIO.read(getClass().getClassLoader().getResource("player/spr_npc_daphni_south_3.png"));
+        south0 = setup("spr_npc_daphni_walk_south_0");
+        south1 = setup("spr_npc_daphni_walk_south_1");
+        south2 = setup("spr_npc_daphni_south_2");
+        south3 = setup("spr_npc_daphni_south_3");
+    }
 
-            idleImage = south0; // Default idle sprite
+    public BufferedImage setup (String imageName){
 
-        } catch (IOException e) {
-            System.err.println("Error loading player sprites: " + e.getMessage());
+        UtilityTool uTool = new UtilityTool();
+        BufferedImage image = null;
+
+        try{
+            image = ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream("/player/" + imageName + ".png")));
+            image = uTool.scaleImage(image, gp.tileSize, gp.tileSize);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+        return image;
     }
 
     public void update() {
@@ -164,6 +174,11 @@ public class Player extends Entity {
                     speed +=0.5;
                     gp.obj[i] = null;
                     break;
+
+//                case ""  : //end
+//                gp.ui.gameFinished();
+//                gp.stopMusic();
+//                break;
             }
         }
     }
@@ -181,6 +196,6 @@ public class Player extends Entity {
                 : idleImage;
 
         int playerSize = (int) (gp.tileSize * 1.5); // Increases only player size
-        g2.drawImage(image, screenX, screenY, gp.tileSize, gp.tileSize, null);
+        g2.drawImage(image, screenX, screenY, null);
     }
 }
