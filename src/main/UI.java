@@ -72,13 +72,21 @@ public class UI {
             }
         }
 
+        //PLAY STATE
         if (gp.gameState == gp.playState){
 
         }
+
+        //PAUSE STATE
         if(gp.gameState == gp.pauseState){
             drawPauseScreen();
-
         }
+
+        //DIALOUGE STATE
+        if (gp.gameState == gp.dialougeState){
+//            drawDialougeScreen;
+        }
+
 //    }
     }
 

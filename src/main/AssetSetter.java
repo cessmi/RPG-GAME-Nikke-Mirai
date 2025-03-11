@@ -1,5 +1,7 @@
 package main;
 
+import entity.NPC_Acacius;
+import entity.NPC_Daphni;
 import object.OBJ_Book;
 import object.OBJ_Door;
 import object.OBJ_Key;
@@ -33,5 +35,16 @@ public class AssetSetter {
         gp.obj[3] = new OBJ_Door(gp);
         gp.obj[3].worldX = 16 * gp.tileSize;
         gp.obj[3].worldY = 54 * gp.tileSize;
+    }
+
+    public void sertNpc(){
+
+        gp.npc[0]= new NPC_Acacius(gp);
+        gp.npc[0].worldX = 42 * gp.tileSize;
+        gp.npc[0].worldY = 52 * gp.tileSize;
+
+        gp.npc[1] = new NPC_Daphni(gp);
+        gp.npc[1].worldX = 70 * gp.tileSize;
+        gp.npc[1].worldY = 53 * gp.tileSize;
     }
 }
