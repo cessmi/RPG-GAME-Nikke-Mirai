@@ -20,7 +20,7 @@ public class Main {
 
         //change logo
        try{
-           BufferedImage logo = ImageIO.read(Objects.requireNonNull(Main.class.getResourceAsStream("/icon/icon1.png")));
+           BufferedImage logo = ImageIO.read(Objects.requireNonNull(Main.class.getResourceAsStream("/Icon/icon1.png")));
            window.setIconImage(logo);
        } catch (IOException e) {
            e.printStackTrace();
