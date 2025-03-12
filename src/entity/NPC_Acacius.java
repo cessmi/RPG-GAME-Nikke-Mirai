@@ -11,6 +11,7 @@ public class NPC_Acacius extends Entity{
         speed = 1;
 
         getImage();
+        setDialouge();
     }
 
     public void getImage() {
@@ -22,9 +23,25 @@ public class NPC_Acacius extends Entity{
         idleImage = west0;
     }
 
+    public void setDialouge(){
+
+        dialouges[0] = "Oh...a new one";
+        dialouges[1] = "I miss my farm";
+        dialouges[2] = "I wonder how she's doing";
+        dialouges[3] = "I'm...innocent";
+        dialouges[4] = "...";
+    }
+
     @Override
     public void setAction(){
         isMoving = false;
+    }
+
+    public void speak(){
+
+        //DO CHARACTER SPECIFIC STUFF
+
+        super.speak();
     }
 
 }

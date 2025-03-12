@@ -17,6 +17,7 @@ public class NPC_Daphni extends Entity{
         speed = 1;
 
         getImage();
+        setDialouge();
     }
 
     public void getImage() {
@@ -41,6 +42,15 @@ public class NPC_Daphni extends Entity{
         south3 = setup("/player/spr_npc_daphni_south_3");
 
         idleImage = west0;
+    }
+
+    public void setDialouge(){
+
+        dialouges[0] = "Please go back to your seat";
+        dialouges[1] = "Passengers shouldn't wander around";
+        dialouges[2] = "Are you lost?";
+        dialouges[3] = "Ask...the ticket collector if you need \n help";
+        dialouges[4] = "...";
     }
 
     @Override
@@ -80,5 +90,12 @@ public class NPC_Daphni extends Entity{
             // Reset counter to restart the cycle
             actionCounter = 0;
         }
-}
+    }
+
+    public void speak(){
+
+        //DO CHARACTER SPECIFIC STUFF
+
+        super.speak();
+    }
 }
