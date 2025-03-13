@@ -26,7 +26,7 @@ public class TileManager {
         this.gp = gp;
 
         //READ TILE DATA FILE
-        InputStream is = getClass().getResourceAsStream("/maps/tiledata_train3.txt");
+        InputStream is = getClass().getResourceAsStream("/maps/train3_tile_data.txt");
         BufferedReader br = new BufferedReader(new InputStreamReader(is));
 
         //GETTING TILE NAMES AND COLLISION FROM THE FILE
