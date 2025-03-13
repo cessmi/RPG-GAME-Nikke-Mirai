@@ -41,11 +41,16 @@ public class NPC_Acacius extends Entity{
         isMoving = false;
     }
 
+    @Override
     public void speak(){
 
-        //DO CHARACTER SPECIFIC STUFF
-
-        super.speak();
-    }
+        if (dialougesIndex < 8) {
+            gp.ui.currentDialouge = dialouges[dialougesIndex];
+            dialougesIndex++;
+        } else {
+            // Always show dialogue index 8 after finishing the conversation.
+            gp.ui.currentDialouge = dialouges[8];
+        }
+        }
 
 }

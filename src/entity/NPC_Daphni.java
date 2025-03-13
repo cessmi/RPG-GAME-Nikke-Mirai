@@ -46,11 +46,15 @@ public class NPC_Daphni extends Entity{
 
     public void setDialouge(){
 
-        dialouges[0] = "Please go back to your seat";
-        dialouges[1] = "Passengers shouldn't wander around";
-        dialouges[2] = "Are you lost?";
-        dialouges[3] = "Ask...the ticket collector if you need \n help";
-        dialouges[4] = "...";
+        dialouges[0] = "A new passenger.";
+        dialouges[1] = "No ticket. No destination";
+        dialouges[2] = "You are not the first soul to arrive here\nwithout knowing why. But answers are not\ngiven freely.";
+        dialouges[3] = "This train carries those who are meant to\nmove on. You—";
+        dialouges[4] = "You are… unmarked";
+        dialouges[5]= "That is dangerous.";
+        dialouges[6]= "Do not stray.\nDo not listen to the whispers.\nAnd whatever you do—";
+        dialouges[7] = "Do not seek the Library of Fates.";
+        dialouges[8] = "...";
     }
 
     @Override
@@ -94,8 +98,12 @@ public class NPC_Daphni extends Entity{
 
     public void speak(){
 
-        //DO CHARACTER SPECIFIC STUFF
-
-        super.speak();
+        if (dialougesIndex < 8) {
+            gp.ui.currentDialouge = dialouges[dialougesIndex];
+            dialougesIndex++;
+        } else {
+            // Always show dialogue index 8 after finishing the conversation.
+            gp.ui.currentDialouge = dialouges[8];
+        }
     }
 }
