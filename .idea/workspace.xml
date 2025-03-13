@@ -5,37 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20631d4d-f436-40f6-89b8-53113f9e6468" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/res/Tiles/black_tile_walkable.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles/floor_carpet_Center.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles/floor_carpet_Center_endL.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles/floor_carpet_Center_endR.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles/railing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles/railing_L.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles/railing_R.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles/railing_up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles/table_center.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles/table_edgeL.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Tiles/table_edgeR.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/objects/book1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/objects/book2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/objects/door__open.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/objects/door_close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/objects/key_1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/Tiles/black_tile.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/Tiles/black_tile.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/Tiles/black_tile_interactable.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/Tiles/blue_tile.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/maps/tiledata_train3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/maps/traindata.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/maps/train3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/maps/train3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/objects/black_tile_obj.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/objects/book-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/objects/book.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/objects/key.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/objects/key2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Door.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Door.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Key.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/NPC_Acacius.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/NPC_Acacius.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,27 +33,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/RPG-GAME-Nikke-Mirai/res/objects",
-    "onboarding.tips.debug.path": "C:/Users/Kyla/IdeaProjects/Nikke Mirai/res/src/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/RPG-GAME-Nikke-Mirai/res/maps&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Kyla/IdeaProjects/Nikke Mirai/res/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\objects" />
       <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\maps" />
+      <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\objects" />
       <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\Tiles" />
       <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\npc" />
       <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\sound" />
