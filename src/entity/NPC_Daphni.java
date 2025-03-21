@@ -4,7 +4,7 @@ import main.GamePanel;
 
 import java.util.Random;
 
-public class NPC_Daphni extends Entity{
+public class NPC_Daphni extends Entity {
 
     private int moveDuration = 120;  // number of frames to move
     private int pauseDuration = 60;  // number of frames to pause
@@ -44,21 +44,21 @@ public class NPC_Daphni extends Entity{
         idleImage = west0;
     }
 
-    public void setDialouge(){
+    public void setDialouge() {
 
         dialouges[0] = "A new passenger.";
         dialouges[1] = "No ticket. No destination";
         dialouges[2] = "You are not the first soul to arrive here\nwithout knowing why. But answers are not\ngiven freely.";
         dialouges[3] = "This train carries those who are meant to\nmove on. You—";
         dialouges[4] = "You are… unmarked";
-        dialouges[5]= "That is dangerous.";
-        dialouges[6]= "Do not stray.\nDo not listen to the whispers.\nAnd whatever you do—";
+        dialouges[5] = "That is dangerous.";
+        dialouges[6] = "Do not stray.\nDo not listen to the whispers.\nAnd whatever you do—";
         dialouges[7] = "Do not seek the Library of Fates.";
         dialouges[8] = "...";
     }
 
     @Override
-    public void setAction(){
+    public void setAction() {
 
         actionCounter++;
         // First, decide whether the NPC is moving or pausing:
@@ -68,7 +68,7 @@ public class NPC_Daphni extends Entity{
             // Optionally, change direction periodically (or based on your own logic)
             // For example, every 60 frames, change direction randomly:
             if (actionCounter % 60 == 0) {
-                int i = (int)(Math.random() * 100) + 1;
+                int i = (int) (Math.random() * 100) + 1;
                 if (i <= 25) {
                     direction = "up";
                 } else if (i <= 50) {
@@ -96,7 +96,8 @@ public class NPC_Daphni extends Entity{
         }
     }
 
-    public void speak(){
+    @Override
+    public void speak() {
 
         if (dialougesIndex < 8) {
             gp.ui.currentDialouge = dialouges[dialougesIndex];
@@ -104,6 +105,24 @@ public class NPC_Daphni extends Entity{
         } else {
             // Always show dialogue index 8 after finishing the conversation.
             gp.ui.currentDialouge = dialouges[8];
+        }
+
+        switch (gp.player.direction) {
+            case "up":
+                direction = "down";
+                break;
+
+            case "down":
+                direction = "up";
+                break;
+
+            case "left":
+                direction = "right";
+                break;
+
+            case "right":
+                direction = "left";
+                break;
         }
     }
 }
