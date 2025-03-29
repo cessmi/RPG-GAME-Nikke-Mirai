@@ -7,58 +7,98 @@ public class EventHandler {
     GamePanel gp;
     Rectangle eventRect;
     int eventRectDefaultX, eventRectDefaultY;
+    boolean eventActive = false;
+    Point currentEventLocation = null;
 
     public EventHandler(GamePanel gp) {
         this.gp = gp;
-
-        eventRect = new Rectangle();
-        eventRect.x = 23;
-        eventRect.y = 23;
-        eventRect.width = 2;
-        eventRect.height = 2;
+        eventRect = new Rectangle(23, 23, 2, 2);
         eventRectDefaultX = eventRect.x;
         eventRectDefaultY = eventRect.y;
     }
 
     public void checkEvent() {
-//        if (triggerEvent(10, 5, "any")) { // Example: Player steps on (10,5), battle starts
-//            startBattle();
-//        }
-        if (triggerEvent(15, 8, "any")) { // Example: Player steps on (15,8), cutscene plays
-            gp.ui.showMessage("A mysterious force stops you...");
-            playCutscene();
+        // Check if we should exit current event
+        if (eventActive && !isPlayerInEventArea()) {
+            exitEvent();
+            return;
+        }
+
+        // Check for new event
+        if (!eventActive && hit(36, 54, "any")) {
+            testEvent(gp.dialougeState);
         }
     }
 
-    public boolean triggerEvent(int eventCol, int eventRow, String reqDirection) {
-        boolean triggered = false;
+    private boolean isPlayerInEventArea() {
+        if (gp.player == null || currentEventLocation == null) return false;
 
         gp.player.solidArea.x = gp.player.worldX + gp.player.solidArea.x;
         gp.player.solidArea.y = gp.player.worldY + gp.player.solidArea.y;
-        eventRect.x = eventCol * gp.tileSize + eventRect.x;
-        eventRect.y = eventRow * gp.tileSize + eventRect.y;
 
-        if (gp.player.solidArea.intersects(eventRect)) {
-            if (gp.player.direction.equals(reqDirection) || reqDirection.equals("any")) {
-                triggered = true;
-            }
-        }
+        eventRect.x = currentEventLocation.x * gp.tileSize + eventRectDefaultX;
+        eventRect.y = currentEventLocation.y * gp.tileSize + eventRectDefaultY;
 
+        boolean stillInArea = gp.player.solidArea.intersects(eventRect);
+
+        // Reset positions
         gp.player.solidArea.x = gp.player.solidAreaDefaultX;
         gp.player.solidArea.y = gp.player.solidAreaDefaultY;
         eventRect.x = eventRectDefaultX;
         eventRect.y = eventRectDefaultY;
 
-        return triggered;
+        return stillInArea;
     }
 
-//    public void startBattle() {
-//        gp.ui.showMessage("A battle starts!");
-//        gp.gameState = gp.battleState; // Change game state to battle
-//    }
+    public boolean hit(int eventCol, int eventRow, String reqDirection) {
+        if (gp.player == null) return false;
 
-    public void playCutscene() {
-        // Trigger a cutscene (this is where you would implement a transition)
-        gp.ui.showMessage("A vision appears...");
+        // Save original positions
+        int playerSolidX = gp.player.solidArea.x;
+        int playerSolidY = gp.player.solidArea.y;
+
+        // Calculate positions
+        gp.player.solidArea.x = gp.player.worldX + gp.player.solidArea.x;
+        gp.player.solidArea.y = gp.player.worldY + gp.player.solidArea.y;
+        eventRect.x = eventCol * gp.tileSize + eventRectDefaultX;
+        eventRect.y = eventRow * gp.tileSize + eventRectDefaultY;
+
+        boolean hit = false;
+
+        if (gp.player.solidArea.intersects(eventRect)) {
+            if (reqDirection.equals("any") ||
+                    gp.player.direction.equals(reqDirection)) {
+                hit = true;
+                currentEventLocation = new Point(eventCol, eventRow);
+            }
+        }
+
+        // Reset positions
+        gp.player.solidArea.x = playerSolidX;
+        gp.player.solidArea.y = playerSolidY;
+        eventRect.x = eventRectDefaultX;
+        eventRect.y = eventRectDefaultY;
+
+        return hit;
+    }
+
+    public void testEvent(int gameState) {
+        if (gp.ui == null) return;
+
+        gp.gameState = gameState;
+        gp.ui.currentDialouge = "Event triggered! Move away to exit.";
+        gp.currentSpeaker = "NULL";
+        gp.ui.speakerName = "";
+        eventActive = true;
+    }
+
+    public void exitEvent() {
+        gp.gameState = gp.playState;
+        gp.ui.currentDialouge = "";
+        eventActive = false;
+        currentEventLocation = null;
+        gp.currentSpeaker = "NULL";
+        gp.ui.speakerName = "";
+
     }
 }

@@ -102,6 +102,10 @@ public class Player extends Entity {
         int npcIndex = gp.cChecker.checkEntity(this, gp.npc);
         interactNPC(npcIndex);
 
+        //CHECK EVENT
+        gp.eHamdler.checkEvent();
+        gp.keyH.enterPressed = false;
+
         // **Step 4: Move Player if No Tile Collision**
         if (!collisionOn && isMoving) {
 //            System.out.println("Moving " + direction + " - No collision detected");
@@ -182,7 +186,6 @@ public class Player extends Entity {
                 gp.npc[i].speak();
             }
         }
-        gp.keyH.enterPressed = false;
     }
 
 

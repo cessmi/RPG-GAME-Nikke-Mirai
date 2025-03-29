@@ -6,15 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="20631d4d-f436-40f6-89b8-53113f9e6468" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/sprites/Phobius normal.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/sprites/Phoibus_normal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/sprites/Phobius speak.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/sprites/Phoibus_speak.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/NPC_Acacius.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/NPC_Acacius.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/NPC_Daphni.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/NPC_Daphni.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/NPC_Phoibus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/NPC_Phoibus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/NPC_Shein.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/NPC_Shein.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/NPC_WiseGirl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/NPC_WiseGirl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/EventHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
