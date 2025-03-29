@@ -15,10 +15,10 @@ public class NPC_Acacius extends Entity{
     }
 
     public void getImage() {
-        north0 = setup("/npc/npc1_north");
-        south0 = setup("/npc/npc1_south");
-        west0 = setup("/npc/npc1_west");
-        east0 = setup("/npc/npc1_east");
+        north0 = setup("/npc/npc1/npc1_north");
+        south0 = setup("/npc/npc1/npc1_south");
+        west0 = setup("/npc/npc1/npc1_west");
+        east0 = setup("/npc/npc1/npc1_east");
 
         idleImage = west0;
     }

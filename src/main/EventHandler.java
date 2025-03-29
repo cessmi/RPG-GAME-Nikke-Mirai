@@ -24,10 +24,10 @@ public class EventHandler {
 //        if (triggerEvent(10, 5, "any")) { // Example: Player steps on (10,5), battle starts
 //            startBattle();
 //        }
-//        if (triggerEvent(15, 8, "any")) { // Example: Player steps on (15,8), cutscene plays
-//            gp.ui.showMessage("A mysterious force stops you...");
-//            playCutscene();
-//        }
+        if (triggerEvent(15, 8, "any")) { // Example: Player steps on (15,8), cutscene plays
+            gp.ui.showMessage("A mysterious force stops you...");
+            playCutscene();
+        }
     }
 
     public boolean triggerEvent(int eventCol, int eventRow, String reqDirection) {
