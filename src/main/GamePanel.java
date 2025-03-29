@@ -42,7 +42,7 @@ public class GamePanel extends JPanel implements Runnable {
     public Sound music = new Sound();
     public Sound se = new Sound();
     public UI ui = new UI(this);
-    public EventHandler eHamdler = new EventHandler(this);
+    public EventHandler eHandler = new EventHandler(this);
     Thread gameThread;
 
     //ENTITY AND OBJECT
@@ -165,6 +165,7 @@ public class GamePanel extends JPanel implements Runnable {
         } else {
             if (gameState == playState) {
                 player.update();
+                eHandler.checkEvent();
                 for (int i = 0; i < npc.length; i++) {
                     if(npc[i] != null){
                         npc[i].update();

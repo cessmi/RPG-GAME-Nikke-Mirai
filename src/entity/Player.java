@@ -103,7 +103,7 @@ public class Player extends Entity {
         interactNPC(npcIndex);
 
         //CHECK EVENT
-        gp.eHamdler.checkEvent();
+        gp.eHandler.checkEvent();
         gp.keyH.enterPressed = false;
 
         // **Step 4: Move Player if No Tile Collision**
