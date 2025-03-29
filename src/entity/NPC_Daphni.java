@@ -98,31 +98,33 @@ public class NPC_Daphni extends Entity {
 
     @Override
     public void speak() {
+        gp.ui.speakerName = "Daphni";
 
         if (dialougesIndex < 8) {
-            gp.ui.currentDialouge = dialouges[dialougesIndex];
+            String line = dialouges[dialougesIndex];
+            gp.ui.currentDialouge = line;
+
+            if (line.trim().equals("...")) {
+                gp.currentSpeaker = "DaphniSilent"; // triggers alt sprite
+            } else {
+                gp.currentSpeaker = "Daphni";
+            }
+
             dialougesIndex++;
         } else {
-            // Always show dialogue index 8 after finishing the conversation.
             gp.ui.currentDialouge = dialouges[8];
+            gp.currentSpeaker = "DaphniSilent"; // Last line is "..."
         }
 
         switch (gp.player.direction) {
-            case "up":
-                direction = "down";
-                break;
-
-            case "down":
-                direction = "up";
-                break;
-
-            case "left":
-                direction = "right";
-                break;
-
-            case "right":
-                direction = "left";
-                break;
+            case "up" -> direction = "down";
+            case "down" -> direction = "up";
+            case "left" -> direction = "right";
+            case "right" -> direction = "left";
         }
+
     }
+
+
 }
+

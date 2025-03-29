@@ -45,6 +45,10 @@ public class NPC_WiseGirl extends Entity{
 
     @Override
     public void speak() {
+
+        gp.ui.speakerName = "Wise Girl";
+        gp.currentSpeaker = "Wise Girl";
+
         if (dialoguesIndex < 7) {
             gp.ui.currentDialouge = dialouges[dialoguesIndex];
             dialoguesIndex++;

@@ -51,6 +51,9 @@ public class NPC_Shein extends Entity {
 
     @Override
     public void speak() {
+        gp.ui.speakerName = "Shein";
+        gp.currentSpeaker = "Shein";
+
         if (!dialogueFinished && !postJumpscare) {
             if (dialougesIndex <= 12) {
                 gp.ui.currentDialouge = dialouges[dialougesIndex];

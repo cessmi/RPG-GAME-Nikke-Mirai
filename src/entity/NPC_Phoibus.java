@@ -43,15 +43,29 @@ public class NPC_Phoibus extends Entity{
     }
 
     @Override
-    public void speak(){
+    public void speak() {
+        gp.ui.speakerName = "Phoibus";
 
         if (dialougesIndex < 12) {
-            gp.ui.currentDialouge = dialouges[dialougesIndex];
+            String line = dialouges[dialougesIndex];
+            gp.ui.currentDialouge = line;
+
+            if (line.trim().equals("...")) {
+                gp.currentSpeaker = "PhoibusSilent";
+            } else {
+                gp.currentSpeaker = "Phoibus";
+            }
+
             dialougesIndex++;
+            gp.ui.dialogueFinished = false; // still going
         } else {
-            // Always show dialogue index 8 after finishing the conversation.
+            // Final line: show "..." and wait for player to confirm
             gp.ui.currentDialouge = dialouges[12];
+            gp.currentSpeaker = "PhoibusSilent";
+            gp.ui.dialogueFinished = true; // ✅ signals end
         }
     }
+
+
 
 }

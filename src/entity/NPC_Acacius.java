@@ -43,6 +43,8 @@ public class NPC_Acacius extends Entity{
 
     @Override
     public void speak(){
+        gp.currentSpeaker = "Acacius";
+        gp.ui.speakerName = "Acacius";
 
         if (dialougesIndex < 8) {
             gp.ui.currentDialouge = dialouges[dialougesIndex];
@@ -51,6 +53,6 @@ public class NPC_Acacius extends Entity{
             // Always show dialogue index 8 after finishing the conversation.
             gp.ui.currentDialouge = dialouges[8];
         }
-        }
+    }
 
 }
