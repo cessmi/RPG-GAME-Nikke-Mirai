@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20631d4d-f436-40f6-89b8-53113f9e6468" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/res/sound/SmileGirl.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/sound/shin.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/NPC_SmilingGirl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/NPC_SmilingGirl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Sound.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "cessmi"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/cessmi/RPG-GAME-Nikke-Mirai.git",
+    "accountId": "5c0751b7-05f0-4f62-a887-5b303e3382ca"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
