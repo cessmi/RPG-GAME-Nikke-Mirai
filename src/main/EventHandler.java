@@ -25,6 +25,7 @@ public class EventHandler {
 
     private void setupCutscenes() {
         cutsceneMap.put(new Point(26, 52), new IntroCutscene(gp));
+        cutsceneMap.put(new Point(14, 54), new SmilingGirlJumpscare(gp));
         // add more cutscenes with tile coordinates here
         // cutsceneMap.put(new Point(x, y), new AnotherCutscene(gp));
     }
@@ -35,14 +36,23 @@ public class EventHandler {
             return;
         }
 
+        Point triggeredEvent = null;
+
         for (Point eventPoint : cutsceneMap.keySet()) {
             if (!eventActive && hit(eventPoint.x, eventPoint.y, "any")) {
                 cutsceneMap.get(eventPoint).play();
                 eventActive = true;
+                triggeredEvent = eventPoint; // save it for removal
                 break;
             }
         }
+
+        // 🔥 Remove AFTER the loop to avoid unreachable code
+        if (triggeredEvent != null) {
+            cutsceneMap.remove(triggeredEvent);
+        }
     }
+
 
     private boolean isPlayerInEventArea() {
         if (gp.player == null || currentEventLocation == null) return false;

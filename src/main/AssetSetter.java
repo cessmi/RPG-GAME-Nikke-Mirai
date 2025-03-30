@@ -57,5 +57,9 @@ public class AssetSetter {
         gp.npc[4] = new NPC_Shein(gp);
         gp.npc[4].worldX = 4 * gp.tileSize;
         gp.npc[4].worldY = 51 * gp.tileSize;
+
+        gp.npc[5] = new NPC_JP(gp);
+        gp.npc[5].worldX = 27 * gp.tileSize;
+        gp.npc[5].worldY = 54 * gp.tileSize;
     }
 }

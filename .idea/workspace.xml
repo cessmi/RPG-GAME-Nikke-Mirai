@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20631d4d-f436-40f6-89b8-53113f9e6468" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/Cutscene.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/IntroCutscene.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/jumpscare/jump2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/npc/npc_static/jp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/NPC_JP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/NPC_SmilingGirl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/JumpScare2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/SmilingGirlJumpscare.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AssetSetter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/EventHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,10 +61,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\jumpscare" />
+      <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\npc\npc_static" />
       <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\sound" />
       <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\player" />
       <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\npc" />
-      <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\maps" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\RPG-GAME-Nikke-Mirai\res\npc\npc_daphni" />
