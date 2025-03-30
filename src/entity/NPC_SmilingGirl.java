@@ -71,7 +71,7 @@ public class NPC_SmilingGirl extends Entity {
             // Jumpscare trigger
             if (gp.keyH.enterPressed) {
                 new JumpScare2();
-                gp.playSE(5);
+                gp.playSE(6);
                 gp.keyH.enterPressed = false; // ⬅️ prevent double triggers
                 dialogueFinished = false;
                 postJumpscare = true;

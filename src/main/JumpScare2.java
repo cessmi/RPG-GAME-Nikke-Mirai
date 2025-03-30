@@ -35,6 +35,24 @@ public class JumpScare2 extends JFrame {
             }
         }, 0, 100); // every 100 milliseconds
 
+        // Shake the window for about 400ms (20 iterations with 20ms delay)
+        Point originalLocation = getLocation();
+        Timer shakeTimer = new Timer();
+        shakeTimer.scheduleAtFixedRate(new TimerTask() {
+            int shakeCount = 0;
+            @Override
+            public void run() {
+                int offsetX = (int)(Math.random() * 10) - 5; // Shake horizontally by ±5 pixels
+                int offsetY = (int)(Math.random() * 10) - 5; // Shake vertically by ±5 pixels
+                setLocation(originalLocation.x + offsetX, originalLocation.y + offsetY);
+                shakeCount++;
+                if (shakeCount >= 20) {
+                    shakeTimer.cancel();
+                    setLocation(originalLocation);
+                }
+            }
+        }, 0, 20);
+
         // Auto close and stop flashing after 2 seconds
         new Timer().schedule(new TimerTask() {
             @Override
@@ -44,4 +62,5 @@ public class JumpScare2 extends JFrame {
             }
         }, 2000);
     }
+
 }
