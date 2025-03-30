@@ -61,5 +61,12 @@ public class AssetSetter {
         gp.npc[5] = new NPC_JP(gp);
         gp.npc[5].worldX = 27 * gp.tileSize;
         gp.npc[5].worldY = 54 * gp.tileSize;
+
+        //6 is SmilingGirl
+
+        gp.npc[7] = new NPC_Eirene(gp);
+        gp.npc[7].worldX = 58 * gp.tileSize;
+        gp.npc[7].worldY = 51 * gp.tileSize;
+
     }
 }

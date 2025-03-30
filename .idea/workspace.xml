@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20631d4d-f436-40f6-89b8-53113f9e6468" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/res/jumpscare/jump2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/npc/npc_static/jp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/NPC_JP.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/NPC_SmilingGirl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/JumpScare2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/SmilingGirlJumpscare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AssetSetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/EventHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/NPC_Eirene.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
