@@ -41,21 +41,25 @@ public class Sound {
 
 
     public void play() {
-
-        clip.start();
-
+        if (clip != null) {
+            clip.setFramePosition(0); // rewind
+            clip.start();
+        }
     }
 
     public void loop() {
-
-        clip.loop(Clip.LOOP_CONTINUOUSLY);
-
+        if (clip != null) {
+            clip.setFramePosition(0); // rewind
+            clip.loop(Clip.LOOP_CONTINUOUSLY);
+        }
     }
 
     public void stop() {
-
-        clip.stop();
-
+        if (clip != null) {
+            clip.stop();
+            clip.close(); // optional cleanup
+        }
     }
+
 
 }

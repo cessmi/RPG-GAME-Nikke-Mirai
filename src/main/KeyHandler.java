@@ -23,8 +23,8 @@ public class KeyHandler implements KeyListener {
     public void keyPressed(KeyEvent e) {
         int code = e.getKeyCode();
 
+        // MENU CONTROLS
         if (gamePanel.inMenu) {
-            // MENU NAVIGATION CONTROLS
             if (code == KeyEvent.VK_W || code == KeyEvent.VK_UP) {
                 gamePanel.menuState.handleKeyPress(KeyEvent.VK_UP);
             }
@@ -34,53 +34,48 @@ public class KeyHandler implements KeyListener {
             if (code == KeyEvent.VK_ENTER) {
                 gamePanel.menuState.handleKeyPress(KeyEvent.VK_ENTER);
             }
-        } else {
-            if (gamePanel.gameState == gamePanel.playState){
-                // GAME CONTROLS
-                if (code == KeyEvent.VK_W || code == KeyEvent.VK_UP) {
-                    upPressed = true;
-                }
-                if (code == KeyEvent.VK_A || code == KeyEvent.VK_LEFT) {
-                    leftPressed = true;
-                }
-                if (code == KeyEvent.VK_S || code == KeyEvent.VK_DOWN) {
-                    downPressed = true;
-                }
-                if (code == KeyEvent.VK_D || code == KeyEvent.VK_RIGHT) {
-                    rightPressed = true;
-                }
-                if (code == KeyEvent.VK_P) {
-                    gamePanel.gameState = gamePanel.pauseState;
-                    }
-                if (code == KeyEvent.VK_Z){
-                    enterPressed = true;
-                }
-                }
+            return; // prevent menu input from falling through
+        }
 
-                if (code == KeyEvent.VK_T){
-                    if (checkDrawTime == false){
-                        checkDrawTime = true;
-                    }
-                    else if (checkDrawTime == true){
-                        checkDrawTime = false;
-                    }
-            }
-
-            }
-        //PAUSE STATE
-        if (gamePanel.gameState == gamePanel.pauseState){
-            if (code == KeyEvent.VK_P) {
+        // TOGGLE PAUSE STATE
+        if (code == KeyEvent.VK_P) {
+            if (gamePanel.gameState == gamePanel.playState) {
+                gamePanel.gameState = gamePanel.pauseState;
+            } else if (gamePanel.gameState == gamePanel.pauseState) {
                 gamePanel.gameState = gamePanel.playState;
             }
         }
 
-        //DIALOUGE STATE
-        else if (gamePanel.gameState == gamePanel.dialougeState){
-            if (code == KeyEvent.VK_Z){
-                gamePanel.gameState = gamePanel.playState;
+        // DEBUG DRAW TIME TOGGLE
+        if (code == KeyEvent.VK_T) {
+            checkDrawTime = !checkDrawTime;
+        }
+
+        // PLAY STATE CONTROLS
+        if (gamePanel.gameState == gamePanel.playState) {
+            if (code == KeyEvent.VK_W || code == KeyEvent.VK_UP) {
+                upPressed = true;
             }
+            if (code == KeyEvent.VK_A || code == KeyEvent.VK_LEFT) {
+                leftPressed = true;
+            }
+            if (code == KeyEvent.VK_S || code == KeyEvent.VK_DOWN) {
+                downPressed = true;
+            }
+            if (code == KeyEvent.VK_D || code == KeyEvent.VK_RIGHT) {
+                rightPressed = true;
+            }
+            if (code == KeyEvent.VK_Z) {
+                enterPressed = true;
+            }
+        }
+
+        // DIALOGUE STATE
+        if (gamePanel.gameState == gamePanel.dialougeState && code == KeyEvent.VK_Z) {
+            gamePanel.gameState = gamePanel.playState;
         }
     }
+
 
 
 
