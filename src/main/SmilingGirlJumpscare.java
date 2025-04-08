@@ -20,9 +20,5 @@ public class SmilingGirlJumpscare implements Cutscene {
         npc.worldX = gp.tileSize * 14;
         npc.worldY = gp.tileSize * 53;
         gp.npc[6] = npc;
-
-//        // Optional: Freeze the player briefly or do a creepy flash
-//        gp.ui.showMessage("...She's here.");
-//        gp.gameState = gp.pauseState;
     }
 }

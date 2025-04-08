@@ -17,7 +17,6 @@ public class UI {
     public String message = " ";
     public boolean dialogueFinished = false;
     int messageCounter = 0;
-//    public boolean gameFinished = false;
     public String currentDialouge = "";
     public String speakerName= "";
     BufferedImage phoibusSprite, phoibusSilentSprite;
@@ -52,25 +51,6 @@ public class UI {
     public void draw (Graphics2D g2) {
 
         this.g2 = g2;
-
-//        if(gameFinished == true) {
-
-//        g2.setFont(text_32);
-//        g2.setColor(Color.color);
-
-//        String text;
-//        int textLength;
-//        int x;
-//        int y;
-
-//        text = "To be continued";
-//        textLength = (int)g2.getFontMetrics().getStringBounds(text, g2).getWidth();
-
-//        int x = gp.screenWidth/2 - textLength/2;
-//        int y = gp.screeHeight/2 - (gp.tileSize*3);
-//        g2.drawString (text, x, y);
-//        }
-//        else {
 
         g2.setFont(text_32);
         g2.setColor(Color.white);

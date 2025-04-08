@@ -21,10 +21,6 @@ public class MenuState {
     private GamePanel gp;
     private String[] menuOptions = {
             "START GAME",
-            "CONTINUE",
-            "OPTIONS",
-            "ACHIEVEMENTS",
-            "EXTRAS",
             "QUIT GAME"
     };
 
